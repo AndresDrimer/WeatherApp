@@ -3,13 +3,13 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
-def index(request):
-    return HttpResponse ('<h1> Hola </h1>')    
+def index(request):   
+    return render (request, 'app1/index.html')
 
-def quienesSomos (request):
+def quienes_somos (request):
     return HttpResponse ('<h1> Quienes somos? </h1>')
 
-def climaExtendido (request):
+def clima_extendido (request):
     return HttpResponse ('<h4> Clima a 10 días </h4>')
 
 
