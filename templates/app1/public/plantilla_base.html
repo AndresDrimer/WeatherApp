@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> {% block title %}Pantilla Base{% endblock title %}</title>
+    <title> {% block title %}Plantilla Base{% endblock title %}</title>
    
     {% comment "" %} este link no me anda!!
     <link rel="stylesheet" href="{% static '\app1\public\css\style.css'%}">
@@ -12,10 +12,97 @@
     
     {% block link-css %}{% endblock link-css %}
 </head>
+<script src="https://kit.fontawesome.com/9c090b21a8.js" crossorigin="anonymous"></script>
 <body>
+
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color:black;
+            font-size: 1.2rem;
+            line-height: 1.6em;
+            margin-top: 10em;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            line-height: 1.3em;
+        }
+        
+        .container {
+            width: 85%;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 5px 0;
+        }
+        
+        .header {
+            background: #5DADE2;
+            color: white;
+            padding: 0.5rem 0;
+        
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height:70px;
+        }
+          .header a {
+              color: white;
+              text-decoration: none;
+              font-size: 15px;
+              font-family: Arial, Helvetica, sans-serif;
+          }
+    
+        .logo-nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .navigation ul {
+            margin-bottom: 120px;
+            padding: 0px;
+            list-style: none;
+        }
+        
+          .navigation ul li {
+             display:inline-block;
+          }
+            .navigation ul li a {
+               margin: 0;
+                display: block;
+               padding: 0.1rem 0.5rem;
+               transition: all 0.4s linear;
+               border-radius: 5px;
+            }
+              .navigation ul li a:hover {
+                  background:#A9CCE3;
+              }
+            
+    </style>
+
+
     -----SECCION HEADER----
     {% load static %}
-   <img src="{% static '/img/weather-img2.jpg'%}" alt="">
+   
+   
+    <header class="header">
+        <div class="container logo-nav-container" >
+          <a><img src="{% static '/img/weather-img2.jpg'%}" alt=""></a>
+          <nav class="navigation">
+            <ul>
+               <li><a href="index.html">INICIO</a></li>
+               <li><a href="quienes_somos.html">QUIENES SOMOS</a></li>
+               <li><a href="suscripcion.html">REGISTRARSE</a></li>
+            </ul>
+          </nav>
+        </div> 
+    </header>
+
+
+  
     ---------------------------
 
  {% block contenido %}
@@ -23,7 +110,40 @@
 
 
 
+ <footer>
+    <style>
+        .foot {
+            background:#5DADE2;
+            color: white;
+            font-size:small;
+            position:fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height:15%;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 1.6em;
+        }
+        
+    </style>
+
+    <div class="foot">
+        <div class="social">
+            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook" aria-hidden="true" style="color:white"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter" aria-hidden="true" style="color:white"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true" style="color:white"></i></a>
+            <a href="htpps://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin" aria-hidden="true" style="color:white"></i></a>
+            <a href="https://www.pinterest.com" target="_blank"><i class="fa-brands fa-pinterest" aria-hidden="true" style="color:white"></i></a>      
+        </div>
+        <p>&copy; [Grupo 7] - Django - Comision 22819</p>
+    </div>
+</footer>
+
     -----SECCION FOOTER------
     {% block link-javascript %}{% endblock link-javascript %}
+
 </body>
 </html>
