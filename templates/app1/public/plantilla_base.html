@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> {% block title %}Plantilla Base{% endblock title %}</title>
    
-    {% comment "" %} este link no me anda!! {% endcomment %}
+   
     {% load static %}
+    <link rel="stylesheet" href="{% static '\app1\public\css\bootstrap.css'%}">
     <link rel="stylesheet" href="{% static '\app1\public\css\style.css'%}">
    
     
@@ -16,74 +17,7 @@
 <script src="https://kit.fontawesome.com/9c090b21a8.js" crossorigin="anonymous"></script>
 <body>
 
-    <style>
-        body {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            color:black;
-            font-size: 1.2rem;
-            line-height: 1.6em;
-            margin-top: 10em;
-        }
-        
-        h1 {
-            font-size: 2rem;
-            line-height: 1.3em;
-        }
-        
-        .container {
-            width: 85%;
-            max-width: 950px;
-            margin: 0 auto;
-            padding: 5px 0;
-        }
-        
-        .header {
-            background: #5DADE2;
-            color: white;
-            padding: 0.5rem 0;
-        
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height:70px;
-        }
-          .header a {
-              color: white;
-              text-decoration: none;
-              font-size: 15px;
-              font-family: Arial, Helvetica, sans-serif;
-          }
     
-        .logo-nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .navigation ul {
-            margin-bottom: 120px;
-            padding: 0px;
-            list-style: none;
-        }
-        
-          .navigation ul li {
-             display:inline-block;
-          }
-            .navigation ul li a {
-               margin: 0;
-                display: block;
-               padding: 0.1rem 0.5rem;
-               transition: all 0.4s linear;
-               border-radius: 5px;
-            }
-              .navigation ul li a:hover {
-                  background:#A9CCE3;
-              }
-            
-    </style>
-
 
   
     {% load static %}
@@ -104,7 +38,7 @@
 
 
   
-    ---------------------------
+  
 
  {% block contenido %}
  {% endblock contenido %}
@@ -112,24 +46,7 @@
 
 
  <footer>
-    <style>
-        .foot {
-            background:#5DADE2;
-            color: white;
-            font-size:small;
-            position:fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height:15%;
-            text-align: center;
-        }
-
-        p {
-            margin-bottom: 1.6em;
-        }
-        
-    </style>
+   
 
     <div class="foot">
         <div class="social">
@@ -145,6 +62,8 @@
 
     
     {% block link-javascript %}{% endblock link-javascript %}
+    
+    <script src="{% static '\app1\public\js\bootstrap.bundle.js'%}"></script>
 
 </body>
 </html>
