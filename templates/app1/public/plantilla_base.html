@@ -8,39 +8,129 @@
    
    
     {% load static %}
-    <link rel="stylesheet" href="{% static '\app1\public\css\bootstrap.css'%}">
+   <!-- <link rel="stylesheet" href="{% static '\app1\public\css\bootstrap.css'%}"> -->
     <link rel="stylesheet" href="{% static '\app1\public\css\style.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
    
     
     {% block link-css %}{% endblock link-css %}
 </head>
-<script src="https://kit.fontawesome.com/9c090b21a8.js" crossorigin="anonymous"></script>
+
 <body>
+ 
+    {% load static %}
+  
+
+   
+    <div class="greyFilter">
+        <div class="mainClimateImg">
+            <header>
+                <div class="greyFiterNav">
+                    <nav>
+                       <a href="">///</a>
+                        <a href="" id="a-doble"><img src="../static/assets/img/location-svg.svg" alt="location">      Buenos Aires, Arg. </a>
+                        <a href=""> <img src="../static/assets/img/plus.png" alt="plus"> </a>
+                    </nav>
+                </div>
+            </header>
+
+            <table id="table-principal">
+                <tr>
+                    <td>
+                        <img src="../static/assets/img/ICONO_SVG_broken_clouds.svg" alt="weather-icon" id="weather-icon">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>22°C</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>jueves 13/11/22 - 19:32hs</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="last-cell-primary-table">
+                        <p><img src="../static/assets/img/gota.svg" alt="gota" class="gota">         25% humedad</p>  
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="black-container">
+        <table id="secondary-table">
+            <tr>
+                <td class="td-secondary-table-icon"><img src="../static/assets/img/ICONOS/ICONO_SVG_clean_day.svg" alt=""></td>
+                <td class="td-secondary-table-icon"><img src="../static/assets/img/ICONOS/ICONO_SVG_rain_night.svg" alt=""></td>
+                <td class="td-secondary-table-icon"><img src="../static/assets/img/ICONOS/ICONO_SVG_clean_day.svg" alt=""></td>
+                <td class="td-secondary-table-icon"><img src="../static/assets/img/ICONOS/ICONO_SVG_rain_night.svg" alt=""></td>
+                <td class="td-secondary-table-icon"><img src="../static/assets/img/ICONOS/ICONO_SVG_clean_day.svg" alt=""></td>
+                <td class="td-secondary-table-icon"><img src="../static/assets/img/ICONOS/ICONO_SVG_rain_night.svg" alt=""></td>
+                <td class="td-secondary-table-icon"><img src="../static/assets/img/ICONOS/ICONO_SVG_rain_night.svg" alt=""></td>
+            </tr>
+            <tr class="tr-secondary-table" id="temperature-table-secondary">
+                <td>22°</td>
+                <td>22°</td>
+                <td>22°</td>
+                <td>22°</td>
+                <td>22°</td>
+                <td>22°</td>
+                <td>22°</td>
+                
+            </tr>
+            <tr class="tr-secondary-table">
+                <td>15h</td>
+                <td>16h</td>
+                <td>17h</td>
+                <td>18h</td>
+                <td>19h</td>
+                <td>20h</td>
+                <td>20h</td>
+                
+            </tr>
+           
+            <tr class="tr-secondary-table"  id="humidity-table-secondary">
+                <td><img src="../static/assets/img/gota.svg" alt="gota" class="gota">         25%</td>
+                <td><img src="../static/assets/img/gota.svg" alt="gota" class="gota">         25%</td>
+                <td><img src="../static/assets/img/gota.svg" alt="gota" class="gota">         25%</td>
+                <td><img src="../static/assets/img/gota.svg" alt="gota" class="gota">         25%</td>
+                <td><img src="../static/assets/img/gota.svg" alt="gota" class="gota">         25%</td>
+                <td><img src="../static/assets/img/gota.svg" alt="gota" class="gota">         25%</td>
+                <td><img src="../static/assets/img/gota.svg" alt="gota" class="gota">         25%</td>
+            </tr>
+           
+        </table>   
+        <div> 
+            <div class="example1">
+                <h3>  Sin alertas  </h3>
+                </div>
+
+            
+            </div>
+        </div>  
+        <div class="buttons-container">
+            <button class="button-71" role="button">Suscripción</button>
+            <button class="button-71" role="button">??</button>
+        </div>
+    </div>
 
     
 
-  
-    {% load static %}
+
    
-   
-    <header class="header">
-        <div class="container logo-nav-container" >
-          <a><img src="{% static '/img/weather-img2.jpg'%}" alt=""></a>
-          <nav class="navigation">
-            <ul>
-               <li><a href="index.html">INICIO</a></li>
-               <li><a href="quienes_somos.html">QUIENES SOMOS</a></li>
-               <li><a href="suscripcion.html">REGISTRARSE</a></li>
-            </ul>
-          </nav>
-        </div> 
-    </header>
+<br><br><br><br><br><br><br><br><br><br>
 
 
   
   
 
  {% block contenido %}
+
  {% endblock contenido %}
 
 
@@ -62,7 +152,7 @@
 
     
     {% block link-javascript %}{% endblock link-javascript %}
-    
+    <script src="https://kit.fontawesome.com/9c090b21a8.js" crossorigin="anonymous"></script>
     <script src="{% static '\app1\public\js\bootstrap.bundle.js'%}"></script>
 
 </body>
