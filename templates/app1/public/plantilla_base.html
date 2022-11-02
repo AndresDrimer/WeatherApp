@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&display=swap" rel="stylesheet">
-   
+    <link rel="shortcut icon" href="../static/assets/img/climateIcon.ico">
     
     {% block link-css %}{% endblock link-css %}
 </head>
@@ -28,18 +28,32 @@
         <div class="mainClimateImg">
             <header>
                 <div class="greyFiterNav">
-                    <nav>
-                       <a href="">///</a>
-                        <a href="" id="a-doble"><img src="../static/assets/img/location-svg.svg" alt="location">      Buenos Aires, Arg. </a>
-                        <a href=""> <img src="../static/assets/img/plus.png" alt="plus"> </a>
-                    </nav>
+                    <section class="top-nav">
+                        <div><img src="../static/assets/img/climateLogo_Icon_white.svg" alt="logo" id="logo-mini">
+                        </div> 
+                       <div id="location">
+                        <h4><img src="../static/assets/img/location-svg.svg" alt="location">      Buenos Aires, Arg. </h4>
+                        </div>
+
+                        <input id="menu-toggle" type="checkbox" />
+                        <label class='menu-button-container' for="menu-toggle">
+                             <div class='menu-button'></div>
+                        </label>
+                        <ul class="menu">
+                          <li>Configuración</li>
+                          <li>Clima extendido</li>
+                          <li>Quienes somos</li>
+                        </ul>
+                      </section>
+                    
+                      
                 </div>
             </header>
 
             <table id="table-principal">
                 <tr>
                     <td>
-                        <img src="../static/assets/img/ICONO_SVG_broken_clouds.svg" alt="weather-icon" id="weather-icon">
+                        <a href="#"><img src="../static/assets/img/ICONOS/ICONO_SVG_clean_day.svg" alt="weather-icon" id="weather-icon"></a>
                     </td>
                 </tr>
                 <tr>
